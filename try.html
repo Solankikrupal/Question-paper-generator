@@ -1,0 +1,35 @@
+
+<?php
+
+for ($i = 1; $i <= 10; $i++) {
+    echo "<div id='Participentfieldwrap'></div>";
+}
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <form>
+    <div id="Participentfieldwrap">
+      First Name : <input type="text"  id=""/> <br />
+      Last Name : <input type="text" id=""  /><br />
+      Email : <input type="text" id=""  /> 
+    </div>        
+  </form>
+
+  <script type="text/javascript">
+    var participantsField = document.getElementsById("Participentfieldwrap"),
+        form = document.getElementsByTagName("form")[0],
+        ContestantNum = 4,
+        i;
+    for(i=0; i<ContestantNum; i++){
+      var clone = participantsField.cloneNode(true);
+      form.appendChild(clone);
+    }
+  </script>
+</body>
+</body>
+</html>

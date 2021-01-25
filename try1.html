@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<script type="text/javascript">
+	function multiplyNode(node, count, deep) {
+    for (var i = 0, copy; i < count - 1; i++) {
+        copy = node.cloneNode(deep);
+        node.parentNode.insertBefore(copy, node);
+    }
+}
+
+
+</script>
+<body>
+  <div class="box">Hi!</div>
+ <script type="text/javascript">
+ 	multiplyNode(document.querySelector('.box'), 5, true);
+ 	
+</script> 
+</body>
+</html>

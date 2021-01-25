@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paper</title>
+
+</head>
+<style type="text/css">
+	h1,h3{
+		font-family:"Times New Roman";
+	}
+	hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
+.main{
+	font-size: 19px;
+	padding-top: 0.5em;
+	margin-top: 0.5em;
+}
+.left{
+
+	display: table-cell;
+	text-align: left;
+	padding-right: 20em;
+	margin: 1em;
+} 
+.middle{
+	
+	display: table-cell;
+	text-align: center;
+	margin: 1em;
+}
+.right{
+
+	display: table-cell;
+	text-align: right;
+	padding-left: 20em;
+	margin: 1em;
+
+}
+div{
+	font-family: "Times New Roman";
+	color:black;
+	font-weight: bold;
+}
+input{
+	font-weight: bold;
+	border-width: 0px;
+}
+h4{
+	margin-bottom:0em; 	
+}
+ul{
+	margin: 0em;
+}
+</style>
+<script type="text/javascript">
+	
+	function multiplyNode(node, count, deep) {
+    for (var i = 0, copy; i < count - 1; i++) {
+        copy = node.cloneNode(deep);
+        node.parentNode.insertBefore(copy, node);
+    }
+}
+
+</script>
+<body>
+	<div class="head">
+	<center><h1>Birla Vishvakarma Mahavidyalaya(Engineering College)</h1></center>
+	<center><h3><i>An Autonomous Institution</i></h3></center>
+	<center><h3>Fourth Year,B.Tech(Computer Engineering)</h3></center>
+	</div>
+	<div class="main">
+			<div class="left">
+				<b>Course Title:</b><span><input type="text" name="subject" value="DBMS"><br></span>
+				<span><b>Course Code:</b><span><input type="text" name="subject"></span>
+			</div>
+			<div class="middle">
+				<span><b>Examination:</b><input type="text" name="subject"><br></span>
+				<span<b>Maximum Marks:</b><input type="text" name="subject"></span>
+			</div>
+			<div class="right">
+				<span><b>Date:</b><input type="text" name="subject" value=416546><br></span>
+				<span><b>Time:</b><input type="text" name="subject"></span>
+			</div>
+	</div>
+	<div class="instructions">
+		<h4><i>Instruction:</i></h4><br>
+		<ul style="list-style-type:square;">
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+		</ul>
+	</div>
+	<hr>
+	<div class="models-model">
+	<div class="models">
+		Q.1 Answer the following Question
+		<div class="question">
+			<?php
+			
+
+                                                include 'connect.php';
+                                                $i=1;
+                      $sql_sel_sub="SELECT * from  addquestion,subjects";
+                         $res_sel_sub= mysqli_query($a,$sql_sel_sub);
+                         while ($row=mysqli_fetch_array($res_sel_sub )){
+			?>
+
+				<input type="text" name="question" value="hiii">
+				<script type="text/javascript">
+					multiplyNode(document.querySelector('.question'), 5, true);			
+				</script>
+			</div>		
+	</div>
+	</div>
+	<script type="text/javascript">
+		multiplyNode(document.querySelector('.models-model'), 5, true);
+		//multiplyNode(document.querySelector('.question'), 3, true);
+		
+
+	</script>
+</body>
+</html>
